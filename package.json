@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "directories": {
-    "test": "tests"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
