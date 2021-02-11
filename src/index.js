@@ -102,12 +102,42 @@ class D {
     }
     return outputString
   }
+  when() {
+    const when = new D()
+    const calcYear = this.year - when.year
+    const calcMonth = this._date.getMonth() - when._date.getMonth() + (calcYear * 12)
+    const calcDay = this._date.getDay() - when._date.getDay()
+    const calcHours = this._date.getHours() - when._date.getHours() + (calcDay * 24)
 
+    if (calcMonth > 11) {
+      return `This is ${calcYear} year(s) from now`
+    } else if (calcMonth < -11) {
+      return `This was ${Math.abs(calcYear)} year(s) ago`
+    } else if (calcMonth > 0 ) {
+      return `This is ${calcMonth} month(s) from now`
+    } else if (calcMonth < 0) {
+      return `This was ${Math.abs(calcMonth) } month(s) ago` 
+    } else if (calcHours > 23) {
+      return `This is ${Math.abs(calcDay)} day(s) from now`
+    } else if (calcHours < -23) {
+      return `This was ${Math.abs(calcDay)} day(s) ago`
+    } else {
+      return 'Enter a date: (Year, Month, Day, Hour, Minutes, Seconds)'
+    }
+  }
 }
 
+// Test for Parts 1 - 3
 // const a = new D()
 // const b = a.format('') //Test here for date lib
 // console.log(b)
 
+// Test for Empty Return on D
 // const c = a.format()
 // console.log(c)
+
+// Test for Part 4: Years, Months, Days
+// const f = new D(2021, 1, 8, 0, 0, 0)
+// console.log(f.when())
+
+module.exports = D
