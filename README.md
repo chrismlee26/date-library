@@ -1,8 +1,13 @@
 ## Date Library Project
 
+![npm](https://img.shields.io/npm/v/few2-1-date-library)
+![NPM](https://img.shields.io/npm/l/few2-1-date-library)
+![GitHub repo size](https://img.shields.io/github/repo-size/chrismlee26/date-library)
+![GitHub issues](https://img.shields.io/github/issues/chrismlee26/date-library)
+
 For FEW 2.1 (Advanced Javascript) at Make School. Assignment #2.
 
-v1.2.1
+v1.2.3
 
 Built with Javascript ES6 (Vanilla)
 
@@ -25,3 +30,4 @@ $ 'npm install' for dependencies
 ## Updates
 
 1. Added unit test with 'Jest' Library
+2. Added Badges

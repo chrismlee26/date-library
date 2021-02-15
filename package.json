@@ -1,6 +1,6 @@
 {
-  "name": "date-library",
-  "version": "1.2.1",
+  "name": "few2-1-date-library",
+  "version": "1.2.3",
   "main": "index.js",
   "scripts": {
     "test": "jest"
@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "directories": {
-    "test": ""
+    "test": "tests"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,9 @@
     "url": "https://github.com/chrismlee26/date-library/issues"
   },
   "homepage": "https://github.com/chrismlee26/date-library#readme",
-  "description": "",
+  "description": "For FEW 2.1 (Advanced Javascript) at Make School. Assignment #2.",
   "devDependencies": {
     "jest": "^26.6.3"
-  }
+  },
+  "dependencies": {}
 }
