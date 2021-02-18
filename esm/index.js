@@ -1,4 +1,7 @@
-import { months, mons, days, dys } from './utils'
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const mons = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const dys = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
 /**
  * class D create a new date
@@ -21,7 +24,7 @@ import { months, mons, days, dys } from './utils'
 
 class D {
   constructor(...args) {
-    this._date = new Date(...args)
+    this._date = new Date(...args);
   }
 
   get year() {
@@ -123,16 +126,16 @@ class D {
       "i" : this.mins, // Minutes short ('5')
       "S" : this.seconds, // Seconds full ('09')
       "s" : this.secs //  Seconds short ('9')
-    }
+    };
 
-    let outputString = ''
+    let outputString = '';
     for (let i = 0; i < dateFormat.length; i++) { //for loop, i counts dateFormat string
       if (dateDict[dateFormat[i]] === undefined) { //look through dateDict to find out if called by dateFormat
         // add the character from formatString append to output string character [dateFormat[i]]
-        outputString += dateFormat[i]
+        outputString += dateFormat[i];
       } else { 
         // add the value from the dict to output string [date dict]
-        outputString += dateDict[dateFormat[i]] //append that value at key [i] to output string
+        outputString += dateDict[dateFormat[i]]; //append that value at key [i] to output string
       }
     }
     return outputString
@@ -146,11 +149,11 @@ class D {
    */
 
   when() {
-    const when = new D()
-    const calcYear = this.year - when.year
-    const calcMonth = this._date.getMonth() - when._date.getMonth() + (calcYear * 12)
-    const calcDay = this._date.getDay() - when._date.getDay()
-    const calcHours = this._date.getHours() - when._date.getHours() + (calcDay * 24)
+    const when = new D();
+    const calcYear = this.year - when.year;
+    const calcMonth = this._date.getMonth() - when._date.getMonth() + (calcYear * 12);
+    const calcDay = this._date.getDay() - when._date.getDay();
+    const calcHours = this._date.getHours() - when._date.getHours() + (calcDay * 24);
 
     if (calcMonth > 11) {
       return `This is ${calcYear} year(s) from now`
@@ -170,33 +173,4 @@ class D {
   }
 }
 
-// Test for Parts 1 - 3
-// const a = new D()
-// const b = a.format('') //Test here for date lib
-// console.log(b)
-
-// Test for Empty Return on D
-// const c = a.format()
-// console.log(c)
-
-// Test for Part 4: Years, Months, Days
-// const f = new D(2021, 1, 8, 0, 0, 0)
-// console.log(f.when())
-
-
-// const exDateYear = new D(2025, 1, 1, 1, 1, 1)
-// const exDateMonth = new D(2021, 4, 1, 1, 1, 1)
-// const exDateDay = new D(2021, 1, 16, 1, 1, 1)
-// console.log(exDateYear.when())
-// console.log(exDateMonth.when())
-// console.log(exDateDay.when())
-
-
-// const exDate = new D(2001, 8, 20, 1, 2, 3)
-// console.log(exDate.format('Y,y / M,m / D,d / t / H,h / I,i / S,s'))
-
-
-// const exDateDay = new D(2021, 1, 25, 16, 16, 1)
-// console.log(exDateDay)
-
-export default D
+export default D;

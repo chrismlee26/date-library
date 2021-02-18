@@ -1,5 +1,4 @@
-const D = require('../src/index')
-const { months, mons, days, dys } = require('../src/utils')
+const D = require('../umd/date-lib')
 
 const today = new Date()
 const E = new D()
