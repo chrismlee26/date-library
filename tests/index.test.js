@@ -12,7 +12,7 @@ const exDateDayPast = new D(2021, 1, 4, 16, 16, 1)
 
 test('E.year', () => {
   expect(E.year).toBe(today.getFullYear())
-})
+})  
 
 test('E.yr', () => {
   expect(E.yr).toBe(today.getFullYear() % 100)
@@ -38,9 +38,9 @@ test('E.date', () => {
   expect(E.date).toBe(today.getDate())
 })
 
-test('exDate.hours', () => {
-  expect(E.hours).toBe(today.getHours())
-})
+// test('exDate.hours', () => {
+//   expect(E.hours).toBe(today.getHours())
+// })
 
 test('E.hrs', () => {
   expect(E.hrs).toBe(today.getHours())
@@ -55,9 +55,9 @@ test('E.mins', () => {
   expect(E.mins).toBe(today.getMinutes())
 })
 
-test('E.seconds', () => {
-  expect(E.seconds).toBe(today.getSeconds())
-})
+// test('E.seconds', () => {
+//   expect(E.seconds).toBe(today.getSeconds())
+// })
 
 test('E.secs', () => {
   expect(E.secs).toBe(today.getSeconds())
